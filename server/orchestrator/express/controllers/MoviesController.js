@@ -7,7 +7,6 @@ class MoviesController {
     try {
       const movies = JSON.parse(await redis.get("movies"));
       if (movies) {
-        console.log("masuk sini?")
         res.status(200).json(movies);
       } else {
         const { data } = await axios({
@@ -15,7 +14,6 @@ class MoviesController {
           method: "GET",
         });
         res.status(200).json(data);
-        console.log(data)
         redis.set("movies", JSON.stringify(data));
       }
     } catch (err) {
@@ -27,7 +25,7 @@ class MoviesController {
     try {
       const { id } = req.params;
       const movie = JSON.parse(await redis.get("movie"));
-      if (movie._id === id) {
+      if (movie && movie._id === id) {
         res.status(200).json(movie);
       } else {
         const { data } = await axios({

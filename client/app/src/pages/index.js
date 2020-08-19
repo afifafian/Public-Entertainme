@@ -1,0 +1,11 @@
+export {default as Home} from './Home';
+export {default as Movies} from './Movies';
+export {default as Series} from './Series';
+export {default as MovieDetail} from './MovieDetail';
+export {default as SeriesDetail} from './SeriesDetail';
+export {default as AddMovie} from './AddMovie';
+export {default as EditMovie} from './EditMovie';
+export {default as AddSeries} from './AddSeries';
+export {default as EditSeries} from './EditSeries';
+export {default as Favorites} from './Favorites';
+export {default as NotFound} from './NotFound';

@@ -11,6 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "apollo-server": "^2.16.1",
-    "graphql": "^15.3.0"
+    "axios": "^0.19.2",
+    "graphql": "^15.3.0",
+    "ioredis": "^4.17.3"
   }
 }

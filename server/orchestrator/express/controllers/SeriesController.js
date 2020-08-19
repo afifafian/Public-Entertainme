@@ -24,8 +24,8 @@ class SeriesController {
     static async getOneSeries(req, res) {
         try {
             const { id } = req.params;
-            const series = JSON.parse(await redis.get("series"));
-            if (series._id === id) {
+            const series = JSON.parse(await redis.get("serie"));
+            if (series && series._id === id) {
                 res.status(200).json(series);
             } else {
                 const { data } = await axios({
@@ -33,7 +33,7 @@ class SeriesController {
                     method: "GET",
                 });
                 res.status(200).json(data);
-                redis.set("series", JSON.stringify(data));
+                redis.set("serie", JSON.stringify(data));
             }
         } catch (err) {
             res.status(500).json({message: "Internal Server Error"});
