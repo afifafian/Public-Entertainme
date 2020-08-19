@@ -2,7 +2,7 @@ const { gql } = require("apollo-server");
 const axios = require("axios");
 const Redis = require("ioredis");
 const redis = new Redis();
-const moviesUrl = "http://localhost:3001/movies";
+const moviesUrl = "http://localhost:2008/movies";
 
 const typeDefs = gql`
     type Movie {
