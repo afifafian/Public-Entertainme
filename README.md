@@ -4,7 +4,8 @@ Entertainme is an app that can make you explore more about Movies & TV Series.
 This app allows you to create your desired Movie & TV Series, update and delete it,
 plus you also can add it to your favorites list.
 
-This app has 3 servers and 1 client architectures, with technologies used:
+There are 3 servers in this app with the purpose to analyze the differences in terms of speed time request,
+between casual API request and Cache request. The technologies used in this app:
 
 Server:
 - expressApp (Movie & TV Series): Node JS, Express JS, MongoDB (Join Database)
